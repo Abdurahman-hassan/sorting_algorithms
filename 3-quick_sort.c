@@ -21,6 +21,8 @@ void swap(int *f, int *s)
  * @start: the first element of the partition
  * @end: the last element of the partition
  * @sz: size of array
+ *
+ * Return: the index of the pivot
  */
 ssize_t partition(int *arr, ssize_t start, ssize_t end, size_t sz)
 {
@@ -48,8 +50,8 @@ ssize_t partition(int *arr, ssize_t start, ssize_t end, size_t sz)
  * real_quick - implementation of the quick algo
  *
  * @arr: the array to be sorted
- * @start: the first element of the partition
- * @end: the last element of the partition
+ * @lo: the first element of the partition
+ * @hi: the last element of the partition
  * @sz: size of array
  */
 void real_quick(int *arr, ssize_t lo, ssize_t hi, size_t sz)
@@ -73,7 +75,7 @@ void quick_sort(int *arr, size_t size)
 {
 	ssize_t lo = 0, hi = (ssize_t)size - 1;
 
-	if (!arr || size < 2)
+	if (!arr || !size || size < 2)
 		return;
 	real_quick(arr, lo, hi, size);
 }
