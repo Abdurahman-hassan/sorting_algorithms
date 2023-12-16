@@ -54,9 +54,11 @@ ssize_t partition(int *arr, ssize_t start, ssize_t end, size_t sz)
  */
 void real_quick(int *arr, ssize_t lo, ssize_t hi, size_t sz)
 {
+	ssize_t pivot;
+
 	if (lo >= hi)
 		return;
-	ssize_t pivot = partition(arr, lo, hi, sz);
+	pivot = partition(arr, lo, hi, sz);
 	real_quick(arr, lo, pivot - 1, sz);
 	real_quick(arr, pivot + 1, hi, sz);
 }
@@ -70,6 +72,7 @@ void real_quick(int *arr, ssize_t lo, ssize_t hi, size_t sz)
 void quick_sort(int *arr, size_t size)
 {
 	ssize_t lo = 0, hi = (ssize_t)size - 1;
+
 	if (!arr || size < 2)
 		return;
 	real_quick(arr, lo, hi, size);
