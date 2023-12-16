@@ -73,9 +73,10 @@ void real_quick(int *arr, ssize_t lo, ssize_t hi, size_t sz)
  */
 void quick_sort(int *arr, size_t size)
 {
-	ssize_t lo = 0, hi = (ssize_t)size - 1;
+	ssize_t lo = 0, hi;
 
 	if (!arr || !size || size < 2)
 		return;
+	hi = (ssize_t)size - 1;
 	real_quick(arr, lo, hi, size);
 }
