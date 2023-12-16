@@ -20,9 +20,17 @@ typedef struct listint_s
 
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
+
+void swap(int *f, int *s);
 void swap_nodes(listint_t *node1, listint_t *node2);
+
 void head_2_beg(listint_t **list);
 void swap_and_print(listint_t *node1, listint_t *node2, listint_t **head);
 void insertion_sort_list(listint_t **list);
+
+ssize_t partition(int *arr, ssize_t start, ssize_t end, size_t sz);
+void real_quick(int *arr, ssize_t lo, ssize_t hi, size_t sz);
+void quick_sort(int *arr, size_t size);
+
 
 #endif
