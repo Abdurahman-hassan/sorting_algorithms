@@ -37,7 +37,7 @@ ssize_t partition(int *arr, ssize_t start, ssize_t end, size_t sz)
 				print_array(arr, sz);
 		}
 	}
-	if (end != (first_swap + 1))
+	if (arr[first_swap + 1] != arr[first_swap + 1])
 	{
 		swap(&arr[start], &arr[first_swap + 1]);
 		print_array(arr, sz);
