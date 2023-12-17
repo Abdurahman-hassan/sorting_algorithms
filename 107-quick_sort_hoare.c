@@ -8,10 +8,10 @@
  */
 void swap(int *f, int *s)
 {
-    int tmp = *s;
+	int tmp = *s;
 
-    *s = *f;
-    *f = tmp;
+	*s = *f;
+	*f = tmp;
 }
 
 /**
@@ -26,24 +26,24 @@ void swap(int *f, int *s)
  */
 ssize_t partition(int *arr, ssize_t start, ssize_t end, size_t sz)
 {
-    int pivot = arr[end];
-    ssize_t i = start - 1, j = end + 1;
+	int pivot = arr[end];
+	ssize_t i = start - 1, j = end + 1;
 
-    while (1)
-    {
-        do
-        {
-            i++;
-        } while (arr[i] < pivot);
-        do
-        {
-            j--;
-        } while (arr[j] > pivot);
-        if (i >= j)
-            return i;
-        swap(&arr[i], &arr[j]);
-        print_array(arr, sz);
-    }
+	while (1)
+	{
+		do
+		{
+			i++;
+		} while (arr[i] < pivot);
+		do
+		{
+			j--;
+		} while (arr[j] > pivot);
+		if (i >= j)
+			return i;
+		swap(&arr[i], &arr[j]);
+		print_array(arr, sz);
+	}
 }
 
 /**
@@ -56,13 +56,13 @@ ssize_t partition(int *arr, ssize_t start, ssize_t end, size_t sz)
  */
 void real_quick(int *arr, ssize_t lo, ssize_t hi, size_t sz)
 {
-    ssize_t pivot;
+	ssize_t pivot;
 
-    if (lo >= hi)
-        return;
-    pivot = partition(arr, lo, hi, sz);
-    real_quick(arr, lo, pivot - 1, sz);
-    real_quick(arr, pivot, hi, sz);
+	if (lo >= hi)
+		return;
+	pivot = partition(arr, lo, hi, sz);
+	real_quick(arr, lo, pivot - 1, sz);
+	real_quick(arr, pivot, hi, sz);
 }
 
 /**
@@ -73,10 +73,10 @@ void real_quick(int *arr, ssize_t lo, ssize_t hi, size_t sz)
  */
 void quick_sort_hoare(int *arr, size_t size)
 {
-    ssize_t lo = 0, hi;
+	ssize_t lo = 0, hi;
 
-    if (!arr || !size || size < 2)
-        return;
-    hi = (ssize_t)size - 1;
-    real_quick(arr, lo, hi, size);
+	if (!arr || !size || size < 2)
+		return;
+	hi = (ssize_t)size - 1;
+	real_quick(arr, lo, hi, size);
 }
