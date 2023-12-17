@@ -66,12 +66,12 @@ void real_quick(int *arr, ssize_t lo, ssize_t hi, size_t sz)
 }
 
 /**
- * quick_sort - implementation of the quick algo
+ * quick_sort_hoare - implementation of the quick algo
  *
  * @arr: the array to be sorted
  * @size: size of array
  */
-void quick_sort(int *arr, size_t size)
+void quick_sort_hoare(int *arr, size_t size)
 {
     ssize_t lo = 0, hi;
 
