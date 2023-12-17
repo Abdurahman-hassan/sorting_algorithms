@@ -31,16 +31,14 @@ ssize_t partition(int *arr, ssize_t start, ssize_t end, size_t sz)
 
 	while (1)
 	{
-		do
-		{
+		do {
 			i++;
 		} while (arr[i] < pivot);
-		do
-		{
+		do {
 			j--;
 		} while (arr[j] > pivot);
 		if (i >= j)
-			return i;
+			return (i);
 		swap(&arr[i], &arr[j]);
 		print_array(arr, sz);
 	}
