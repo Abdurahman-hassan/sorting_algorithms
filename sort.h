@@ -32,5 +32,8 @@ ssize_t partition(int *arr, ssize_t start, ssize_t end, size_t sz);
 void real_quick(int *arr, ssize_t lo, ssize_t hi, size_t sz);
 void quick_sort(int *arr, size_t size);
 
+int go(listint_t *last_back, listint_t **last_go, listint_t **head);
+int back(listint_t **last_back, listint_t *last_go, listint_t **head);
+void cocktail_sort_list(listint_t **list);
 
 #endif
