@@ -56,7 +56,7 @@ int go(listint_t *last_back, listint_t **last_go, listint_t **head)
 			last_back = last_back->next;
 	}
 	(*last_go) = last_back;
-	return swap_counter;
+	return (swap_counter);
 }
 
 /**
@@ -80,7 +80,7 @@ int back(listint_t **last_back, listint_t *last_go, listint_t **head)
 			last_go = last_go->prev;
 	}
 	(*last_back) = last_go;
-	return swap_counter;
+	return (swap_counter);
 }
 
 /**
