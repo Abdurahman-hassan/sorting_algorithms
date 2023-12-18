@@ -66,7 +66,7 @@ void radix_sort(int *array, size_t size);
 
 
 
-/* ====================== Quick sort (hoare partition) Function ====================== */
+/* ================ Quick sort (hoare partition) Function ================ */
 void quick_sort_hoare(int *arr, size_t size);
 
 #endif
