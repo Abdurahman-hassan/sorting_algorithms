@@ -12,16 +12,16 @@ void count_sort2(int *arr, ssize_t place, size_t sz)
 	ssize_t *count_arr = malloc(sizeof(ssize_t) * 10), *output_arr, i;
 
 	if (!count_arr)
-		exit;
+		exit(0);
 	output_arr = malloc(sizeof(ssize_t) * sz);
 	if (!output_arr)
 	{
 		free(count_arr);
-		exit;
+		exit(0);
 	}
 	for (i = 0; i < 10; ++i)
 		count_arr[i] = 0;
-	for (i = 0; i < sz; ++i)
+	for (i = 0; i < (ssize_t)sz; ++i)
 		count_arr[(arr[i] / place) % 10]++;
 	for (i = 1; i < 10; ++i)
 		count_arr[i] += count_arr[i - 1];
@@ -30,7 +30,7 @@ void count_sort2(int *arr, ssize_t place, size_t sz)
 		output_arr[count_arr[(arr[i] / place) % 10] - 1] = arr[i];
 		count_arr[(arr[i] / place) % 10]--;
 	}
-	for (i = 0; i < sz; ++i)
+	for (i = 0; i < (ssize_t)sz; ++i)
 		arr[i] = output_arr[i];
 	free(count_arr);
 	free(output_arr);
