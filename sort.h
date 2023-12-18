@@ -1,5 +1,6 @@
-#ifndef SORT_H_
-#define SORT_H_
+#ifndef SORT_H
+#define SORT_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,16 +19,15 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
+/* ====================== utilities Functions ====================== */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
+/* ====================== sorting Functions ====================== */
+void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
-
 void quick_sort(int *arr, size_t size);
-
-
 void cocktail_sort_list(listint_t **list);
-
 void quick_sort_hoare(int *arr, size_t size);
 
 #endif
