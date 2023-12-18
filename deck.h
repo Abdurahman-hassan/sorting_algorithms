@@ -50,6 +50,8 @@ typedef struct deck_node_s
 } deck_node_t;
 
 /* ====================== Sort deck Function ====================== */
+int card_value_to_int(const char *value);
+int card_compare(const void *a, const void *b);
 void sort_deck(deck_node_t **deck);
 
 #endif /* DECK_H */
