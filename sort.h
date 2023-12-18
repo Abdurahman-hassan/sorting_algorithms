@@ -23,9 +23,16 @@ typedef struct listint_s
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
-/* ====================== sorting Functions ====================== */
+/* ====================== Bubble sort Function ====================== */
 void bubble_sort(int *array, size_t size);
+
+/* ====================== Insertion sort Function ====================== */
+void swap_nodes(listint_t *node1, listint_t *node2);
+void head_2_beg(listint_t **list);
+void swap_and_print(listint_t *node1, listint_t *node2, listint_t **head);
 void insertion_sort_list(listint_t **list);
+
+
 void quick_sort(int *arr, size_t size);
 void cocktail_sort_list(listint_t **list);
 void quick_sort_hoare(int *arr, size_t size);
