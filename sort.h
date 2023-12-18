@@ -35,7 +35,16 @@ void insertion_sort_list(listint_t **list);
 /* ====================== Selection sort Function ====================== */
 void selection_sort(int *array, size_t size);
 
+/* ====================== Quick sort Function ====================== */
+void swap(int *f, int *s);
+ssize_t partition(int *arr, ssize_t start, ssize_t end, size_t sz);
+void real_quick(int *arr, ssize_t lo, ssize_t hi, size_t sz);
 void quick_sort(int *arr, size_t size);
+
+/* ====================== Shell sort Function ====================== */
+void shell_sort(int *array, size_t size);
+
+
 void cocktail_sort_list(listint_t **list);
 void quick_sort_hoare(int *arr, size_t size);
 
