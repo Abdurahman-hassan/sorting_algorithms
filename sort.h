@@ -32,6 +32,8 @@ void head_2_beg(listint_t **list);
 void swap_and_print(listint_t *node1, listint_t *node2, listint_t **head);
 void insertion_sort_list(listint_t **list);
 
+/* ====================== Selection sort Function ====================== */
+void selection_sort(int *array, size_t size);
 
 void quick_sort(int *arr, size_t size);
 void cocktail_sort_list(listint_t **list);
