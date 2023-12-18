@@ -56,6 +56,10 @@ void merge(int *array, size_t size, int mid, int *tmp);
 void merge_sort_rec(int *array, size_t size, int *tmp);
 void merge_sort(int *array, size_t size);
 
+/* ====================== Heap sort Function ====================== */
+void heap_sort(int *array, size_t size);
+
+
 void quick_sort_hoare(int *arr, size_t size);
 
 #endif
