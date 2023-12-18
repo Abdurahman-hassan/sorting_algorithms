@@ -48,6 +48,9 @@ void shell_sort(int *array, size_t size);
 /* ============== using swap_and_print from Insertion Sort ==============*/
 void cocktail_sort_list(listint_t **list);
 
+/* ====================== Counting sort Function ====================== */
+void counting_sort(int *array, size_t size);
+
 void quick_sort_hoare(int *arr, size_t size);
 
 #endif
