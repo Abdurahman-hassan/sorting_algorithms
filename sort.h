@@ -57,6 +57,8 @@ void merge_sort_rec(int *array, size_t size, int *tmp);
 void merge_sort(int *array, size_t size);
 
 /* ====================== Heap sort Function ====================== */
+/* ============== using swap from quick Sort ==============*/
+void heapify(int *array, size_t size, int i, size_t size2);
 void heap_sort(int *array, size_t size);
 
 
