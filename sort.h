@@ -67,7 +67,7 @@ void radix_sort(int *array, size_t size);
 /* ================ Quick sort (hoare partition) Function ================ */
 void quick_sort_hoare(int *arr, size_t size);
 
-/* ====================== Bitonic_sort ====================== */
+/* ====================== Bitonic sort Function ====================== */
 void print_stage(int *array, size_t size,
 		size_t full_size, int up);
 void bitonic_merge(int *array, size_t size, int up);
@@ -75,4 +75,4 @@ void bitonic_sort_rec(int *array, size_t size,
 		size_t full_size, int up);
 void bitonic_sort(int *array, size_t size);
 
-#endif
+#endif /* SORT_H */
