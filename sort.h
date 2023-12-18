@@ -44,8 +44,10 @@ void quick_sort(int *arr, size_t size);
 /* ====================== Shell sort Function ====================== */
 void shell_sort(int *array, size_t size);
 
-
+/* ====================== Cocktail sort Function ====================== */
+/* ============== using swap_and_print from Insertion Sort ==============*/
 void cocktail_sort_list(listint_t **list);
+
 void quick_sort_hoare(int *arr, size_t size);
 
 #endif
